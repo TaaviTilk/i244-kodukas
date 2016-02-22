@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VORM GET</title>
+</head>
+
+
+<body>
+<form action="vormget.html"  method="get" onsubmit="return false;">
+
+
+    <table border="0" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <th>KÜSIMUS</th>
+            <th>VASTUS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Sinu nimi</td>
+            <td>
+                <input type="text" maxlength="12" name="nimi">
+            </td>
+        </tr>
+        <tr>
+            <td>Kas i244 kodutöö tehtud?</td>
+            <td>
+                <label>
+                    <input type="radio" name="valik"> EI</label>
+                <br>
+                <label>
+                    <input type="radio" name="valik"> JAH</label>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>Mitmenda nädala töö esitad?</td>
+            <td>
+                <input type="text" list="nadal" name="nadal">
+                <datalist id="nadal">
+                    <option>1. nädala</option>
+                    <option>2. nädala</option>
+                    <option>3. nädala</option>
+                </datalist>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lisa siia kodutöö GitHubi commit veebiaadress</td>
+            <td>
+                <input type="url" name="url">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Kas tundus raske?</td>
+            <td>
+                <input type="number" min="0" max="5" step="1" placeholder="1..5" name="raske">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Millal valmis said?</td>
+            <td>
+                <input type="date" name="valmis_kp">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Jäta oma kommentaar siia</td>
+            <td>
+                <textarea name="kommentar"></textarea>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <button type="submit">Saada vastus ära</button>
+
+</form>
+
+<br>
+    <a href="index.html">Tagasi pealehele</a>
+
+</body>
+</html>
