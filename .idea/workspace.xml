@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ffd9c52-de18-468e-b918-50c44e084796" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kodutoo/index.html" afterPath="$PROJECT_DIR$/kodutoo/index.html" />
-    </list>
+    <list default="true" id="8ffd9c52-de18-468e-b918-50c44e084796" name="Default" comment="" />
     <ignored path="i244-kodukas.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
