@@ -1,5 +1,5 @@
 ﻿# i244-kodukas
 
-i244 kursuse raames loon kodulehe
+i244 kodutööd + hiljem peaks siia tulema ka projekt
 
 
