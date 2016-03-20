@@ -83,9 +83,12 @@
     }
     window.onload = function() {
     var marklaud = document.getElementById("peamine");
+    var laius = window.innerWidth-200;
+    var korgus = window.innerHeight-200;
     marklaud.onclick = function() {
-        marklaud.style.left=(50+Math.random()*(window.screen.availWidth-300))+"px";
-        marklaud.style.top=(50+Math.random()*(window.screen.availHeight-300))+"px";
+        marklaud.style.left=(Math.random()*laius)+"px";
+        marklaud.style.top=(Math.random()*korgus)+"px";
+        //console.log( marklaud.style.left, marklaud.style.top)
 
 // lehe laadimine lõpetatud. Siia funktsiooni sisse kirjutan elementide mõjutamise käsud
 }
