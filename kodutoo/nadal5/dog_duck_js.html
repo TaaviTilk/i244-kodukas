@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>5 kodune töö</title>
+    <style type="text/css">
+        img {
+        width: 100%;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        }
+        #peamine {
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        left: 500px;
+        top: 300px;
+        }
+        #sisemine:nth-child(1) {
+        border-radius: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid blue;
+        }
+        #sisemine:nth-child(2) {
+        border-radius: 50%;
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background-color: red;
+        border: 1px solid red;
+        left: 5%;
+        top: 5%;
+        }
+        #sisemine:nth-child(3) {
+        border-radius: 50%;
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        background-color: white;
+        border: 1px solid blue;
+        left: 15%;
+        top: 15%;
+        }
+        #sisemine:nth-child(4) {
+        border-radius: 50%;
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-color: red;
+        border: 1px solid red;
+        left: 25%;
+        top: 25%;
+        }
+        #sisemine:nth-child(5) {
+        border-radius: 50%;
+        position: absolute;
+        width: 30%;
+        height: 30%;
+        background-color: white;
+        border: 1px solid blue;
+        left: 35%;
+        top: 35%;
+        }
+        #sisemine:nth-child(6) {
+        border-radius: 50%;
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        background-color: red;
+        border: 1px solid red;
+        left: 45%;
+        top: 45%;
+        }
+    </style>
+
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    window.onload = function() {
+    var marklaud = document.getElementById("peamine");
+    marklaud.onclick = function() {
+        marklaud.style.left=(50+Math.random()*(window.screen.availWidth-300))+"px";
+        marklaud.style.top=(50+Math.random()*(window.screen.availHeight-300))+"px";
+
+// lehe laadimine lõpetatud. Siia funktsiooni sisse kirjutan elementide mõjutamise käsud
+}
+}
+    </script>
+
+</head>
+<body>
+
+<img src="../nadal4/duck.png" alt="duck">
+    <div id="peamine">
+        <div id="sisemine">
+
+        </div>
+        <div id="sisemine">
+
+        </div>
+        <div id="sisemine">
+
+        </div>
+        <div id="sisemine">
+
+        </div>
+        <div id="sisemine">
+
+        </div>
+        <div id="sisemine">
+
+        </div>
+    </div>
+
+<br>
+<button onclick="goBack()">TAGASI</button>
+
+</body>
+</html>
