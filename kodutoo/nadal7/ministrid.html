@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ministrid</title>
+    <style type="text/css">
+    img {
+    float: left;
+    margin: 10px 10px;
+    }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+            <td><span> <img src="<?php echo $minister['pilt']; ?>" alt= "Minister" width= 151px height=auto > </span></td>
+            <td>
+                <h2><?php echo $minister['nimi']; ?></h2>
+                <h3><?php echo $minister['amet']; ?></h3>
+                <h4>
+                    <span><a href="mailto:<?php echo $minister['email']; ?>"><?php echo $minister['email']; ?></a></span>
+                </h4>
+            </td>
+    </tr>
+</table>
+<div>
+
+    <br>
+</div>
+
+</body>
+
+</html>
