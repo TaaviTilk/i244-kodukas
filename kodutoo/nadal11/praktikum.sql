@@ -1,3 +1,5 @@
+-- https://echo360.e-ope.ee/ess/echo/presentation/7f8a3226-f6c9-4a07-836a-6661a2a68943?ec=true
+
 -- lisame kategooriad
 INSERT IN TO 
 ttilk__kategooriad
