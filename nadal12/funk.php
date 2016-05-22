@@ -4,8 +4,8 @@
 function connect_db(){
 	global $connection;
 	$host="localhost";
-	$user="test";
-	$pass="t3st3r123";
+	$user="root";
+	$pass="Password";
 	$db="test";
 	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
 	mysqli_query($connection, "SET CHARACTER SET UTF8") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));
@@ -28,11 +28,11 @@ function kuva_puurid(){
 	global $puurid, $connection;
 	$sql= "SELECT DISTINCT puur FROM ttilk__loomaaed";
 	$result = mysqli_query($connection, $sql) or die("$sql- ".mysqli_error($connection));
-	while ($row = mysqli_fetch_assoc($result)){
+	while ($rida = mysqli_fetch_assoc($result)){
 		$sql2 = "SELECT * FROM `ttilk__loomaaed` WHERE puur=".$rida["puur"];
 		$res2 = mysqli_query($connection, $sql2) or die("$sql2 - ".mysqli_error($connection));
 		while($loomarida = mysqli_fetch_assoc($res2)) {
-			$puurid[$row["puur"]][]=$loomarida;
+			$puurid[$rida["puur"]][]=$loomarida;
 		}		
 	}
 	include_once('views/puurid.html');

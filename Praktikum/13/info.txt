@@ -1,0 +1,7 @@
+
+praktikumi vodeo - > https://echo360.e-ope.ee/ess/echo/presentation/031f5e6d-6f47-4b33-b485-1b210f771355?ec=true
+algfailid ->  https://github.com/andris9/itk/tree/master/Praktikumid/12
+oppeou versioon -> https://github.com/andris9/itk/tree/master/Praktikumid/13
+
+
+http://localhost/i244/kodutoo/Praktikum/13/ladu.php
