@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+
+require_once('func.php');
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,41 +15,41 @@
 
 <p></p>
 
-<div class="pealkiri">
-    <b>I244 Kodutööd</b>
-</div>
-<br>
-<div class="teema">
-    <h1>
-        PAEV 13 nadal
-    </h1>
-    <ol>
-        <li>
-            <a href="Praktikum/13/ladu.php"> LADU PHP
-            </a>
-        </li>
+    <table border="1">
+    <thead>
+        <tr>
+            <th>Nimetus</th>
+            <th>Pilt</th>
+            <th>Selgitused</th>
+        </tr>
+    </thead>
 
-    </ol>
-        <h1>
-        KODU  13 nadal
-    </h1>
-    <ol>
-        <li>
-            <a href="nadal13/loomaaed.php"> LOOMAAED PHP
-            </a>
-        </li>
+    <tbody>
 
-    </ol>
+        <?php
+        // koolon tsükli lõpus tähendab, et tsükkel koosneb HTML osast
+        foreach (pealeht() as $rida):
+            ?>
 
+            <tr>
+                <td>
+                    <?= htmlspecialchars($rida['nimetus']); ?>
+                </td>
+                <td>
+                    <img src="<?= $rida['pilt']; ?>" alt="<?= $rida['nimetus']; ?>" height="100"/>  
 
+                </td>
+                <td>
+                    <?= htmlspecialchars($rida['text']); ?>
+                </td>
 
+            </tr>
 
+        <?php endforeach; ?>
 
-<p>
-    <a href="http://validator.w3.org/check?uri=referer">
-        <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
-    </a>
-</p>
+    </tbody>
+</table>
+
 
 
 

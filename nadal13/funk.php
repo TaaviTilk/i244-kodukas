@@ -70,23 +70,23 @@ function lisa(){
 	if(!empty($_SESSION["user"])){
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
 			// postitus on tehtud
-			if(in_array("", $_POST) || $_FILES["liik"]["error"] > 0 ){
+			if(in_array("", $_POST) || $_FILES["pilt"]["error"] > 0 ){
 				$errors[] = "Mingi väli jäi postitamisel tühjaks või on faili üleslaadimisel tekkinud viga.";
 				include_once('views/loomavorm.html');
 			}else{
 				// kõik ok, laeme faili üles ja teeme kirje tabelisse
 				connect_db();
-				upload("liik");
-				$query = "INSERT INTO ttilk__loomaaed (NIMI, PUUR, LIIK) 
+				upload("pilt");
+				$query = "INSERT INTO ttilk__loomaaed (NIMI, PUUR, PILT) 
 							VALUES ('"
 								.mysqli_real_escape_string($GLOBALS['connection'], $_POST["nimi"])."', '"
 								.mysqli_real_escape_string($GLOBALS['connection'], $_POST["puur"])."', '"
-								."pildid/".$_FILES["liik"]["name"].
+								."pildid/".$_FILES["pilt"]["name"].
 									"');";
 								
 				$result = mysqli_query($GLOBALS['connection'], $query) or die("$query - ".mysqli_error($GLOBALS['connection']));
-				echo "Uus kirje loodud: " . mysqli_insert_id($GLOBALS['connection']) . "Värskendan lehte 3 sekundi pärast.";
-				header("refresh:3; url=loomaaed.php?page=loomad");
+				echo $_FILES["pilt"]["name"];
+				//header("refresh:3; url=loomaaed.php?page=loomad");
 			}// if
 		}else{
 			include_once('views/loomavorm.html');
